@@ -1,13 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume Builder</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder | ABES Engineering College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0052cc, #3399ff);
+      color: #ffffff;
+    }
+
+    header {
+      background: transparent;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: auto;
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .github-btn {
+      background-color: #ffffff;
+      color: #0052cc;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .github-btn:hover {
+      background-color: #e6f0ff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-logo {
+      width: 200px;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-btn {
+      background-color: #ffffff;
+      color: #0052cc;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .cta-btn:hover {
+      background-color: #dbe9ff;
+    }
+
+    footer {
+       background: linear-gradient(to right, #0052cc, #3399ff);
+      color: #ffffff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .footer-bottom-text {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img class="logo-img" src="/Abeslogo.png" alt="ABES Logo">
+      <div class="logo-text">ResumeBuilder | ABES EC</div>
+    </div>
+    <a class="github-btn" href="https://github.com" target="_blank">GitHub</a>
+  </header>
+
+  <section class="hero">
+    <img class="hero-logo" src="/abescentre.png" alt="ABES Logo">
+    <h1>Build Your Resume in Minutes</h1>
+    <p>Create professional and polished resumes using our free and easy-to-use resume builder tool. Perfect for ABES Engineering College students and job seekers.</p>
+    <a class="cta-btn" href="/app.html">Get Started</a>
+  </section>
+
+  <footer>
+    <div class="footer-bottom-text">
+      &copy; 2025 ABES Engineering College. All rights reserved.
+    </div>
+  </footer>
+</body> 
 </html>
