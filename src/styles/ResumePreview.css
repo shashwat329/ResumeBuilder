@@ -1,0 +1,361 @@
+.resume-preview-container {
+  background-color: #f9f9f9;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.download-button-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.download-pdf-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.download-pdf-button:hover {
+  background-color: #2980b9;
+}
+
+.download-pdf-button:active {
+  transform: translateY(1px);
+}
+
+.resume{
+  padding: 25px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+/* Resume Preview - Exact A4 proportions */
+.resume-preview {
+  margin: 0 auto 40px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #000;
+  line-height: 1.5;
+  
+  /* A4 paper size dimensions */
+  width: 220mm;
+  min-height: 297mm;
+  max-width: 100%;
+  box-sizing: border-box;
+  
+  /* Display properly for screen view */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Resume Header */
+.resume-header {
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.resume-header h1 {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.resume-header p {
+  margin: 0 0 3px 0;
+  font-size: 14px;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  font-size: 14px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.contact-item a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Resume Sections */
+.resume-section {
+  margin-bottom: 7px;
+  page-break-inside: avoid;
+}
+
+.resume-section h2 {
+  font-size: 16px;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  page-break-after: avoid;
+}
+
+.section-content {
+  padding: 0;
+}
+
+.resume-item {
+  margin-bottom: 4px;
+  page-break-inside: avoid;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1px;
+  page-break-inside: avoid;
+}
+
+.item-title {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.item-title h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.item-title h4 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  font-style: italic;
+}
+
+.item-date {
+  flex: 1;
+  font-size: 14px;
+  text-align: right;
+  font-weight: normal;
+}
+
+.gpa-below-date {
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.item-description p {
+  font-size: 14px;
+  margin: 1px 0;
+  line-height: 1.2;
+}
+
+.item-description p::before {
+  content: "– ";
+}
+
+.item-detail {
+  font-size: 14px; 
+  margin: 1px 0;
+}
+
+.item-link a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.item-link a:hover {
+  text-decoration: underline;
+}
+
+/* Project Link */
+.project-link {
+  margin: 4px 0;
+}
+
+.project-link a {
+  display: inline-block;
+  color: black;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.project-link a:hover {
+  text-decoration: underline;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+}
+
+.skill-item {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.skill-item:not(:last-child)::after {
+  content: ", ";
+}
+
+.skill-name {
+  font-weight: normal;
+}
+
+/* Developer Tools / Skills Sections */
+.skills-category {
+  margin-bottom: 4px;
+}
+
+.skills-category-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  
+  .download-button-container {
+    display: none;
+  }
+  
+  .resume-preview-container {
+    padding: 0;
+    box-shadow: none;
+    background-color: white;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .resume-preview {
+    border: none;
+    box-shadow: none;
+    padding: 10mm;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    max-width: 100%;
+    overflow: visible;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    transform: none !important;
+    font-size: 12px;
+  }
+  
+  .resume-header h1 {
+    font-size: 18px;
+  }
+  
+  .resume-header p {
+    font-size: 12px;
+  }
+  
+  .contact-info {
+    font-size: 12px;
+  }
+  
+  .resume-section h2 {
+    font-size: 14px;
+  }
+  
+  .item-title h3 {
+    font-size: 13px;
+    display: flex; 
+  }
+  
+  .item-title h4,
+  .item-date,
+  .item-description p,
+  .item-detail,
+  .skill-item,
+  .project-link a {
+    font-size: 12px;
+  }
+  
+  .project-link a {
+    color: #000088;
+    text-decoration: underline;
+  }
+  
+  body {
+    background-color: white;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1199px) {
+  .resume-preview {
+    max-width: 95%;
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .resume-preview {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-preview {
+    padding: 15px;
+    transform: scale(0.75);
+  }
+  
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+} 
